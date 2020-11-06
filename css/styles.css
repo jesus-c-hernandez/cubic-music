@@ -168,7 +168,7 @@ h4 {
 
 .contenido-bienvenida h2{
     font-size: 7rem;
-    font-weight: 200;
+    font-weight: 300;
     position: relative;
 }
 
@@ -210,6 +210,7 @@ h4 {
 .producciones {
     height: 100vh;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .contenedor-producciones {
@@ -354,7 +355,8 @@ h4 {
     text-align: center;
 }
 
-.estadisticas .comentario {
+.comentario {
+    color: white;
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
@@ -362,7 +364,7 @@ h4 {
     padding: 2rem;
 }
 
-.estadisticas .comentario p {
+.comentario p {
     text-align: right;
     font-style: italic;
 }
@@ -404,5 +406,61 @@ h4 {
     display: block;
     margin: auto;
     width: 5rem;
+}
+
+/** Paginas internas **/
+
+.site-header.inicio-internas .barra a{
+    width: 10rem;
+}
+
+/** Nosotros **/
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    color: white;
+    margin-bottom: 6rem;
+}
+
+.nosotros .estadisticas img{
+   width: 8rem; 
+}
+
+.nosotros .estadisticas h4 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    line-height: 0;
+}
+
+.nosotros .contenido-nosotros h2 {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.comentarios {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comentarios h3 {
+    margin: 0;
+}
+
+.comentarios .comentario {
+    margin-top: 4rem;
+    max-width: 80rem;
+}
+
+.comentarios .comentario:last-of-type {
+    margin-bottom: 2rem;
 }
 
