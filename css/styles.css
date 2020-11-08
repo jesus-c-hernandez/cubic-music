@@ -52,12 +52,29 @@ h4 {
     text-align: center;
 }
 
+.contenido-centrado {
+    max-width: 800px;
+}
+
+.texto-derecha {
+    text-align: end;
+}
+
 .fw-300 {
     font-weight: 300;
 }
 
+.f-white {
+    color: white;
+}
+
 .d-block {
     display: block!important;
+}
+
+.radio-imagen {
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 /** Botones **/
@@ -208,7 +225,7 @@ h4 {
 /** Main - Producciones **/
 
 .producciones {
-    height: 100vh;
+    /* height: 100vh; */
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -216,13 +233,14 @@ h4 {
 .contenedor-producciones {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .artista {
-    flex-basis: calc(33.3% - 1rem);
+    flex: 0 0 calc(20% - 1rem);
     border: 3px solid rgba(0, 0, 0, 0.75);
     background-color: rgba(211, 211, 211, 1);
-    margin: 0 2rem;
+    margin: 0 1rem 1rem 2rem;
 }
 
 .contenido-producciones h2 {
@@ -282,12 +300,16 @@ h4 {
     margin: 0;
 }
 
+
 .contenido-compañias {
-    
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 45rem;
+    margin: 0 45rem; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    margin: 0 auto;
 }
 
 .imagen-compañia {
@@ -367,6 +389,7 @@ h4 {
 .comentario p {
     text-align: right;
     font-style: italic;
+    color: #05c7f2;
 }
 
 .inferior-contacto {
@@ -462,5 +485,143 @@ h4 {
 
 .comentarios .comentario:last-of-type {
     margin-bottom: 2rem;
+}
+
+/** Servicios **/
+
+.contenido-servicios {
+    color: white;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.plan .plan-imagen {
+    flex-basis: 40%;
+}
+
+.plan-imagen img {
+    width: 40rem;
+    border-top-left-radius: 2rem;
+}
+
+.plan .plan-contenido {
+    flex-basis: calc(60%);
+}
+
+.plan-contenido {
+    padding-right: 5rem;
+}
+
+.plan-contenido h3 {
+    text-align: center;
+}
+
+.plan-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    max-height: 8rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.plan-info h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.plan-info p {
+    font-style: italic;
+}
+
+.plan-info span {
+    color: #05c7f2;
+}
+
+/** Produccion Individual **/
+
+.produccion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    color: white;
+}
+
+.escuchar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escuchar img {
+    width: 3rem;
+    margin: 0 1rem;
+}
+
+/** Contacto **/
+
+.field {
+    margin-bottom: 2rem;
+}
+
+.contacto p {
+    font-size: 1.4rem;
+    color: white;
+    margin: 2rem 0 0.3;
+}
+
+legend {
+    font-size: 2rem;
+    color: white;
+}
+
+label {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 98%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 200px;
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
