@@ -797,3 +797,35 @@ textarea {
     margin-bottom: 3rem;
     padding: 2rem;
 }
+
+
+/* Pagina Admin */
+
+.seccion-admin h2 {
+    font-size: 4rem;
+}
+
+.tabla {
+    margin: 3rem auto;
+    font-size: 2rem;
+}
+
+.tabla {
+    width: 100%;
+    border: 1px solid #ffffff;
+}
+
+.tabla th {
+    border: 1px solid #ffffff;
+    font-size: 2.7rem;
+}
+
+.tabla td {
+    font-size: 2.4rem;
+}
+
+.tabla th,
+td {
+    margin: 0 2rem;
+    width: 20%;
+}

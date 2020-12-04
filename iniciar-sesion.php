@@ -43,10 +43,10 @@
         <fieldset class="field">
 
             <label for="login">Nombre de Usuario (correo):</label>
-            <input type="text" id="login" required>
+            <input type="text" id="login" required name="user">
 
             <label for="pass">Contraseña:</label>
-            <input type="password" id="pass" required>
+            <input type="password" id="pass" required name="password">
 
             </fieldset>
 
@@ -62,7 +62,7 @@
 
         
 
-    </main>
+    </form>
 
     <section class="seccion contenedor contenido-centrado">
         <div class="registrarse centrar-texto f-white">
