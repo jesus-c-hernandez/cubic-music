@@ -36,9 +36,9 @@
 
     </header>
 
-    <main class="seccion contenedor contenido-centrado">
+    <form class="seccion contenedor contenido-centrado" action="validar.php" method="post">
 
-        <h1 class="f-white fw-300 centrar-texto">Bienvenido a la Tienda de Cubic Music</h1>
+    <h1 class="f-white fw-300 centrar-texto">Bienvenido a la Tienda de Cubic Music</h1>
 
         <fieldset class="field">
 
@@ -48,9 +48,19 @@
             <label for="pass">Contraseña:</label>
             <input type="password" id="pass" required>
 
-        </fieldset>
+            </fieldset>
 
-        <input type="submit" value="Iniciar Sesión" class="boton boton-azul">
+            <input type="submit" value="Iniciar Sesión" class="boton boton-azul">
+
+    </form>
+
+    <main class="seccion contenedor contenido-centrado">
+
+        
+
+       
+
+        
 
     </main>
 
