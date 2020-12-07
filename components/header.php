@@ -18,10 +18,10 @@
                     <a href="contacto.php">Contacto</a>
                     <a href="productos.php">Productos</a>
                     <?php
-                        if( isset( $_SESSION['user'] ) ){
+                        if( isset( $_SESSION['user'] ) && $_SESSION['user'] != '' && $_SESSION['type'] != ''){
                             echo'
-                                <a href="productos.php">Carrito</a>
-                                <a href="productos.php">Salir</a>
+                                <a href="carrito.php">Carrito</a>
+                                <a href="salir.php">Salir</a>
                             ';
                         } else {
                             echo'
