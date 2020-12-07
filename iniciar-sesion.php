@@ -22,16 +22,16 @@ include "components/head.php";
             <input type="text" id="login" required name="user">
 
             <label for="pass">Contraseña:</label>
-            <input type="password" id="pass" required name="password">
+            <input type="password" id="pass" required name="passw">
 
         </fieldset>
 
         <input type="submit" value="Iniciar Sesión" class="boton boton-azul">
 
         <?php
-        if (isset($_POST["user"]) && isset($_POST["password"])) {
+        if (isset($_POST["user"]) && isset($_POST["passw"])) {
             $usr_login = $_POST["user"];
-            $usr_pwd = $_POST["password"];
+            $usr_pwd = $_POST["passw"];
             $stmt = Conexion::conectar()->prepare("SELECT * FROM usuario WHERE usr_login = :$usr_login ");
             $stmt->bindParam(":" . $usr_login, $usr_login, PDO::PARAM_STR);
             $stmt->execute();
@@ -42,10 +42,10 @@ include "components/head.php";
             if (
                 $respuesta["usr_login"] == $_POST["user"] &&
                 //$respuesta["usuario_password"] == $encriptar
-                $respuesta["usr_pwd"] == $_POST["password"]
+                $respuesta["usr_pwd"] == $_POST["passw"]
             ) {
-                $_SESSION['user'] = $respuesta["usr_login"];
-                $_SESSION['type'] = $respuesta["usr_type"];
+                $_SESSION["user"] = $respuesta["usr_login"];
+                $_SESSION["type"] = $respuesta["usr_type"];
                 if ($respuesta["usr_type"] == 1) {
                     echo '<script>
                                     window.location="inicio-admin.php";

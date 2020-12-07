@@ -42,12 +42,64 @@ require_once "conection/conexion.php";
                             <p class="card-text">
                             $ ' . $value["prod_precio"] . '
                             </p>
-                            <a href="#" class="btn btn-dark">Agreagr al carrito</a>
+                            <a href="productos.php?nom='.$value["prod_nombre"].'&precio='.$value["prod_precio"].'" class="btn btn-dark" >
+                                Agregar al carrito
+                            </a>
                         </div>
                     </div>
                 </div>
                 ';
             }
+            ?>
+            <?php
+                function alCarrito (  ) {
+                    $usr_login = 'cliente1';
+                    $prod_nom = $_GET["nom"];
+                    $prod_cant = 1;
+                    $total = $_GET["precio"];
+                    $tabla = 'carrito';
+                    $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (usr_login, prod_nom, prod_cant, total) 
+                                                            VALUES ( :usr_login, :prod_nom, :prod_cant, :total ) ");
+                    $stmt->bindParam(":usr_login", $usr_login, PDO::PARAM_STR);
+                    $stmt->bindParam(":prod_nom", $prod_nom, PDO::PARAM_STR);
+                    $stmt->bindParam(":prod_cant", $prod_cant, PDO::PARAM_INT);
+                    $stmt->bindParam(":total", $total, PDO::PARAM_INT);
+                    if ( $stmt->execute() ) {
+                        echo '<script>
+                                swal.fire({
+                                icon:"success",
+                                title: "Producto agregado",
+                                showConfirmButton: true,
+                                confirmButtonText: "Cerrar",
+                                closeOnConfirm: false 
+                                }).then((result)=>{
+                                if(result.value){
+                                    window.location="productos.php";
+                                }
+                            });
+                            </script>';
+                    } else {
+                        echo '<script>
+                                swal.fire({
+                                icon:"error",
+                                title: "Producto NO agregado",
+                                showConfirmButton: true,
+                                confirmButtonText: "Cerrar",
+                                closeOnConfirm: false 
+                                }).then((result)=>{
+                                if(result.value){
+                                    window.location="productos.php";
+                                }
+                            });
+                            </script>';
+                    }
+                    $stmt = null;
+                }
+                if (
+                    isset($_GET["nom"])
+                ) {
+                    alCarrito();
+                }
             ?>
         </div>
     </div>

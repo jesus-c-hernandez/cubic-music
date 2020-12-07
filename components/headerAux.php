@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "session-start.php";
 ?>
 <header class="site-header inicio-internas">
 
@@ -18,7 +18,7 @@
             <a href="contacto.php">Contacto</a>
             <a href="productos.php">Productos</a>
             <?php
-                if( isset( $_SESSION['user'] ) && $_SESSION['user'] != '' && $_SESSION['type'] != ''){
+                if(  isset( $_SESSION["user"] ) &&  isset( $_SESSION["type"] ) ){
                     echo'
                         <a href="carrito.php">Carrito</a>
                         <a href="salir.php">Salir</a>
