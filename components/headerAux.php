@@ -1,6 +1,3 @@
-<?php
-    include "session-start.php";
-?>
 <header class="site-header inicio-internas">
 
 <div class="contenedor contenido-header">

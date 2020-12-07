@@ -1,6 +1,4 @@
-<?php
-    include "session-start.php";
-?>
+
 <header class="site-header inicio">
 
         <div class="contenedor contenido-header">
@@ -22,10 +20,12 @@
                             echo'
                                 <a href="carrito.php">Carrito</a>
                                 <a href="salir.php">Salir</a>
+                                <a href="#">'.$_SESSION["user"].'</a>
                             ';
                         } else {
                             echo'
                                 <a href="iniciar-sesion.php">Iniciar Sesion</a>
+                                <a href="#">Nel Prro</a>
                             ';
                         }
                     ?>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    include "components/head.php";
+?>
 
 <?php
     require_once "conection/conexion.php";
@@ -50,10 +53,10 @@
             </tbody>
         </table>
     </div>
-    <div class="text-right">
+    <div class="text-end">
     <?php
             echo '   
-            <h1><span class="badge badge-secondary">Total=$'.$total.'</span></h1>
+            <h1><span class="badge bg-secondary">Total=$'.$total.'</span></h1>
             ';
         ?>
     </div>
@@ -62,7 +65,7 @@
             echo'
                 <a href="carrito.php?total='.$total.'" class="boton boton-azul">Pagar</a>
             ';
-            if ( isset($_GET['total'] ) ) {
+            if ( isset($_GET["total"] ) ) {
                 $tabla = 'venta';
                 date_default_timezone_set('America/Mexico_City');
                 $fecha = date('Y-m-d');
@@ -75,10 +78,32 @@
                 $stmt->bindParam(":fechaActual", $fechaActual, PDO::PARAM_STR);
                 $stmt->bindParam(":ses_id", $ses_id, PDO::PARAM_STR);
                 if ( $stmt->execute() ) {
-                    $usr_login = 'cliente1';
-                    $stmt = Conexion::conectar()->prepare("DELETE FROM carrito WHERE usr_login = :$usr_login ");
-                    $stmt->bindParam(":" . $usr_login, $usr_login, PDO::PARAM_STR);
-                    if ( $stmt->execute() ) {
+                        $usr_login = 'cliente1';
+                        $stmt = null;
+                        $stmt = Conexion::conectar()->prepare("SELECT * FROM carrito WHERE usr_login = :usr_login");
+                        $stmt->bindParam(":usr_login", $usr_login, PDO::PARAM_STR);
+                        $stmt->execute();
+                        $respuesta = $stmt->fetchAll();
+                        $stmt = null;
+                        foreach ($respuesta as $key => $value) {
+                            $prod_nombre = $value["prod_nom"];
+                            $stmt = Conexion::conectar()->prepare("SELECT * FROM producto WHERE prod_nombre = :prod_nombre");
+                            $stmt->bindParam(":prod_nombre", $prod_nombre, PDO::PARAM_STR);
+                            $stmt->execute();
+                            $answer = $stmt->fetch();
+                            $stmt = null;
+                            $inventario = $answer["prod_inventario"] - 1;
+                            $stmt = Conexion::conectar()->prepare("UPDATE producto SET prod_inventario = :prod_inventario WHERE prod_nombre = :prod_nombre ");
+                            $stmt->bindParam(":prod_nombre", $prod_nombre, PDO::PARAM_STR);
+                            $stmt->bindParam(":prod_inventario", $inventario, PDO::PARAM_INT);
+                            $stmt->execute();
+                            $stmt = null;
+                            var_dump( $inventario );
+                        }
+                        $stmt = Conexion::conectar()->prepare("DELETE FROM carrito WHERE usr_login = :$usr_login ");
+                        $stmt->bindParam(":" . $usr_login, $usr_login, PDO::PARAM_STR);
+                        $stmt->execute();
+                        $stmt = null;
                         echo '<script>
                         swal.fire({
                         icon:"success",
@@ -109,7 +134,6 @@
                         </script>';
                     }
                 }
-            }
             $stmt = null;
         ?>
     </div>

@@ -37,11 +37,9 @@ include "components/head.php";
             $stmt->execute();
             $respuesta = $stmt->fetch();
             $stmt = null;
-            
 
             if (
                 $respuesta["usr_login"] == $_POST["user"] &&
-                //$respuesta["usuario_password"] == $encriptar
                 $respuesta["usr_pwd"] == $_POST["passw"]
             ) {
                 $_SESSION["user"] = $respuesta["usr_login"];
@@ -52,9 +50,15 @@ include "components/head.php";
                                 </script>';
                 } else {
                     echo '<script>
-                                    window.location="productos.php";
-                                </script>';
+                            window.location="productos.php";
+                        </script>';
                 }
+            } else {
+                echo '
+                    <div class="alert alert-danger my-3" role="alert">
+                        Datos incorrectos
+                    </div>
+                ';
             }
         }
         ?>
