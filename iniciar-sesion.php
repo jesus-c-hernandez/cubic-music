@@ -1,42 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/logo-pequeño.png">
-</head>
+<?php
+    include "components/head.php";
+    ?>
 
 <body>
 
-    <header class="site-header inicio-internas">
+    <?php
+        require_once "conection/conexion.php";
+        include "components/headerAux.php";
+    ?>
 
-        <div class="contenedor contenido-header">
-
-            <div class="barra">
-
-                <a href="/">
-                    <img src="img/logo.png" alt="Logotipo de Cubic Music">
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html">Conócenos</a>
-                    <a href="servicios.html">Servicios</a>
-                    <a href="producciones.html">Producciones</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <form class="seccion contenedor contenido-centrado" action="validar.php" method="post">
+    <form class="seccion contenedor contenido-centrado text-center" method="post" enctype="multipart/form-data">
 
     <h1 class="f-white fw-300 centrar-texto">Bienvenido a la Tienda de Cubic Music</h1>
 
@@ -52,63 +28,52 @@
 
             <input type="submit" value="Iniciar Sesión" class="boton boton-azul">
 
+            <?php
+                if ( isset( $_POST["user"] ) && isset( $_POST["password"] ) ) {
+                    $usr_login = $_POST["user"];
+                    $usr_pwd = $_POST["password"];
+                    $stmt = Conexion::conectar()->prepare("SELECT * FROM usuario WHERE usr_login = :$usr_login ");
+                    $stmt->bindParam(":" . $usr_login, $usr_login, PDO::PARAM_STR);
+                    $stmt->execute();
+                    $respuesta = $stmt->fetch();
+                    $stmt = null;
+                    if (
+                        $respuesta["usr_login"] == $_POST["user"] &&
+                        //$respuesta["usuario_password"] == $encriptar
+                        $respuesta["usr_pwd"] == $_POST["password"]
+                    ) {
+                        $_SESSION["user"] = $respuesta["usr_login"];
+                        $_SESSION["type"] = $respuesta["usr_type"];
+                        if ( $respuesta["usr_type"] == 1 ){
+                            echo '<script>
+                                    window.location="inicio-admin.php";
+                                </script>';
+                        } else {
+                            echo '<script>
+                                    window.location="productos.php";
+                                </script>';
+                        }
+                        
+                    }
+                }
+            ?>
     </form>
 
     <main class="seccion contenedor contenido-centrado">
 
-        
-
-       
-
-        
-
-    </form>
-
-    <section class="seccion contenedor contenido-centrado">
-        <div class="registrarse centrar-texto f-white">
-            <h3>¿Aún no tienes una cuenta?</h3>
-            <p>¡No esperes más! Sé parte de la comunidad</p>
-            <a href="#" class="boton boton-azul">Registrarse</a>
-        </div>
-    </section>
-
-    <footer class="">
-
-        <div class="barra footer">
-
-            <div>
-                <a href="/">
-                    <img src="img/logo.png" alt="Icono Cubic Music">
-                </a>
+        <section class="seccion contenedor contenido-centrado">
+            <div class="registrarse centrar-texto f-white">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>¡No esperes más! Sé parte de la comunidad</p>
+                <a href="#" class="boton boton-azul">Registrarse</a>
             </div>
+        </section>
 
-            <div class="info">
+    </main>
 
-                <p>Redes:</p>
-
-                <div class="redes">
-                    <a href="#">
-                        <img src="img/logotipo-facebook.png" alt="Logotipo de Facebook">
-                    </a>
-                    <a href="#">
-                        <img src="img/logotipo-twitter.png" alt="Logotipo de Twitter">
-                    </a>
-                    <a href="#">
-                        <img src="img/logotipo-instagram.jpg.png" alt="Logotipo de Instagram">
-                    </a>
-                </div>
-
-                <p>Tel: 5511246879</p>
-                <p>cubicmusic_contacto@gmail.com</p>
-                <p>Calle de la Musica #40, Torreon, Coah. 27145</p>
-            </div>
-
-            <div>
-                <p>Todos los derechos reservados &copy;</p>
-            </div>
-
-        </div>
-    </footer>
+    <?php
+        include "components/footer.php";
+    ?>
 
 </body>
 

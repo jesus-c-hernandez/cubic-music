@@ -11,28 +11,9 @@
 </head>
 
 <body>
-    <header class="site-header inicio-internas">
-
-        <div class="contenedor contenido-header">
-
-            <div class="barra">
-
-                <a href="/">
-                    <img src="img/logo.png" alt="Logotipo de Cubic Music">
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html">Conócenos</a>
-                    <a href="servicios.html">Servicios</a>
-                    <a href="producciones.html">Producciones</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-
-            </div>
-
-        </div>
-
-    </header>
+<?php
+        include "components/headerAux.php";
+    ?>
 
     <h1 class="centrar-texto fw-300 f-white">Bienvenido Administrador</h1>
 
@@ -238,43 +219,9 @@
 
     </section>
 
-    <footer class>
-
-        <div class="barra footer">
-
-            <div>
-                <a href="/">
-                    <img src="img/logo.png" alt="Icono Cubic Music">
-                </a>
-            </div>
-
-            <div class="info">
-
-                <p>Redes:</p>
-
-                <div class="redes">
-                    <a href="#">
-                        <img src="img/logotipo-facebook.png" alt="Logotipo de Facebook">
-                    </a>
-                    <a href="#">
-                        <img src="img/logotipo-twitter.png" alt="Logotipo de Twitter">
-                    </a>
-                    <a href="#">
-                        <img src="img/logotipo-instagram.jpg.png" alt="Logotipo de Instagram">
-                    </a>
-                </div>
-
-                <p>Tel: 5511246879</p>
-                <p>cubicmusic_contacto@gmail.com</p>
-                <p>Calle de la Musica #40, Torreon, Coah. 27145</p>
-            </div>
-
-            <div>
-                <p>Todos los derechos reservados &copy;</p>
-            </div>
-
-        </div>
-    </footer>
+    <?php
+        include "components/footer.php";
+    ?>
 
 </body>
 
