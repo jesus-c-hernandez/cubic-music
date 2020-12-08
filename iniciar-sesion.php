@@ -70,7 +70,7 @@ include "components/head.php";
             <div class="registrarse centrar-texto f-white">
                 <h3>¿Aún no tienes una cuenta?</h3>
                 <p>¡No esperes más! Sé parte de la comunidad</p>
-                <a href="#" class="boton boton-azul">Registrarse</a>
+                <a href="registro.php" class="boton boton-azul">Registrarse</a>
             </div>
         </section>
 
