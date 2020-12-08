@@ -13,7 +13,7 @@
     <h1 class="centrar-texto fw-300 f-white">Bienvenido Administrador</h1>
 
     <?php
-    $con = mysqli_connect("localhost", "root", "", "cubicmusic");
+    $con = mysqli_connect("localhost", "u760520066_cubicAdmin", "Apfelsekte1", "u760520066_cubicmusic");
     ?>
 
     <section class="contenedor seccion-admin">

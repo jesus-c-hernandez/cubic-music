@@ -24,7 +24,7 @@
             <input type="submit" value="Confirmar" id="usr_agregar" name="usr_agregar" class="boton boton-azul">
 
             <?php
-                $con = mysqli_connect("localhost", "root", "", "cubicmusic");
+                $con = mysqli_connect("localhost", "u760520066_cubicAdmin", "Apfelsekte1", "u760520066_cubicmusic");
 
                     if ( isset($_POST["usuario"]) && isset($_POST["contraseña"]) ){
                         $login = $_POST["usuario"];

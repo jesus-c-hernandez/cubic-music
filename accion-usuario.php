@@ -70,7 +70,7 @@
         <?php
     } else {
 
-        $con = mysqli_connect("localhost", "root", "", "cubicmusic");
+        $con = mysqli_connect("localhost", "u760520066_cubicAdmin", "Apfelsekte1", "u760520066_cubicmusic");
 
         if ($agregar != null) {
             // Accion de agregar un usuario
