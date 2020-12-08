@@ -21,7 +21,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-dualipa.jpg" alt="Imagen de Dua Lipa">
                     </a>
 
@@ -47,7 +47,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-benee.jpg" alt="Imagen de Benee">
                     </a>
 
@@ -73,7 +73,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html"></a>
+                    <a href="produccion.php"></a>
                     <img src="img/icono-travis.jpg" alt="Imagen de Travis Scott">
                     </a>
 
@@ -99,7 +99,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-gorillaz.jpg" alt="Imagen de Gorillaz">
                     </a>
 
@@ -125,7 +125,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-billie.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -151,7 +151,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-dayglow.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -177,7 +177,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-james-blunt.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -203,7 +203,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-paramore.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -229,7 +229,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-post-malone.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -255,7 +255,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-snoop-dogg.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -281,7 +281,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-gus.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -307,7 +307,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-khalid.png" alt="Imagen de Gorillaz">
                     </a>
 
@@ -326,7 +326,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>

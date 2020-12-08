@@ -49,7 +49,7 @@
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-dualipa.jpg" alt="Imagen de Dua Lipa">
                     </a>
 
@@ -68,14 +68,14 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-benee.jpg" alt="Imagen de Benee">
                     </a>
 
@@ -94,14 +94,14 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
 
                 <div class="artista">
 
-                    <a href="produccion.html"></a>
+                    <a href="produccion.php"></a>
                     <img src="img/icono-travis.jpg" alt="Imagen de Travis Scott">
                     </a>
 
@@ -120,14 +120,14 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
 
                 <div class="artista">
 
-                    <a href="produccion.html">
+                    <a href="produccion.php">
                         <img src="img/icono-gorillaz.jpg" alt="Imagen de Gorillaz">
                     </a>
 
@@ -146,7 +146,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -251,7 +251,7 @@
                 Conoce nuestros planes de producción. Llena nuestro formulario y nos pondremos en contacto contigo.
             </p>
 
-            <a href="contacto.html" class="boton boton-azul">Contacto</a>
+            <a href="contacto.php" class="boton boton-azul">Contacto</a>
 
         </div>
 
@@ -263,4 +263,4 @@
 
 </body>
 
-</html>
+</php>
