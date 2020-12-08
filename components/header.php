@@ -25,7 +25,6 @@
                         } else {
                             echo'
                                 <a href="iniciar-sesion.php">Iniciar Sesion</a>
-                                <a href="#">Nel Prro</a>
                             ';
                         }
                     ?>
