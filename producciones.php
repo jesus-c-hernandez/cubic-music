@@ -40,7 +40,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -92,7 +92,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -118,7 +118,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -144,7 +144,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -170,7 +170,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -196,7 +196,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -222,7 +222,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -248,7 +248,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -274,7 +274,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
@@ -300,7 +300,7 @@
                     </ul>
 
                     <div class="contenedor-boton">
-                        <a href="produccion.html" class="boton boton-azul d-block">Descubrir</a>
+                        <a href="produccion.php" class="boton boton-azul d-block">Descubrir</a>
                     </div>
 
                 </div>
